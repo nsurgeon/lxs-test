@@ -224,6 +224,7 @@ int main(const int argc, const char *argv[]) {
         auto path = vm["folder"].as<std::string>();
 
         block_manager blocks(block_size, allocator_capacity);
+//        std::random_device rd;
         summary summurizer(path);
 
         multiplexer_t multiplexer;
