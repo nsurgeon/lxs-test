@@ -28,7 +28,7 @@ public:
 
         M consume() {
             std::unique_lock<std::mutex> g(lock_);
-            if (events_.empty()) {
+            while (events_.empty()) {
                 notify_.wait(g);
             }
             if(!events_.empty()) {
