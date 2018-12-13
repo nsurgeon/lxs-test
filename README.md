@@ -34,8 +34,19 @@ Build a simple application which will meet following requirements:
 
 ### Build project
 
-At the moment project is supplied as Eclipse project.
-should be replaced by cmake scripts.
+At the moment project is supplied with 2 options:
+- Eclipse project.
+- cmake build scripts
+
+To build project with CMake
+
+```
+cmake <path to project root> -DCMAKE_INSTALL_PREFIX=<install path prefix>
+make
+```
+
+install path prefix expected to be the same as for boost library
+
 
 ### Run application
 
@@ -54,6 +65,5 @@ Sample applications, generates random blocks and calculate crc32 for each:
 
 # TODO
 - enhance error and exceptional situation handling
-- add cmake build files  
 - logger
 - unit tests
